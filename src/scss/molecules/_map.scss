@@ -1,0 +1,111 @@
+.map-legend {
+	font-weight: 600;
+	border: none;
+	margin-bottom: 20px;
+}
+
+.map-tools {
+	font-size: 19px;
+
+
+	&__layers {
+		display: inline-block;
+		width: 45%;
+		margin-right: 5%;
+	}
+
+	&__filters {
+		display: inline-block;
+	}
+}
+
+.map-industries {
+	font-size: 19px;
+}
+
+.region-map {
+	width: 100%;
+}
+
+#investment-chart {
+  width: 100%;
+}
+
+#mapCanvas {
+  width: 540px;
+
+  @media (max-width: $screen-xs-max) {
+    width: 100%;
+  }
+
+  .uk-region {
+    cursor: pointer;
+    fill: #EFEFEF;
+    stroke: #CCC;
+    // display: none;
+  }
+
+  .non-uk-region {
+    cursor: pointer;
+    fill: #EFEFEF;
+    stroke: #CCC;
+    // display: none;
+  }
+
+  .uk-dot {
+    cursor: pointer;
+    display: none;
+
+    &.scotland {
+      fill: pink;
+    }
+
+    &.northern-ireland {
+      fill: green;
+    }
+
+    &.north-east-england {
+      fill: yellowgreen;
+    }
+
+    &.north-west-england {
+      fill: lightblue;
+    }
+
+    &.yorkshire-and-the-humber {
+      fill: green;
+    }
+
+    &.wales {
+      fill: orange;
+    }
+
+    &.west-midlands {
+      fill: pink;
+    }
+
+    &.east-midlands {
+      fill: orange;
+    }
+
+    &.east-of-england {
+      fill: lightblue;
+    }
+
+    &.south-west-england {
+      fill: yellowgreen;
+    }
+
+    &.south-east-england {
+      fill: green;
+    }
+
+    &.london {
+      fill: purple;
+    }
+  }
+
+  .non-uk-dot {
+    display: none;
+  }
+}

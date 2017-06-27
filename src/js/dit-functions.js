@@ -1,6 +1,8 @@
 var geoLocation = require('./geo-location')
 var form = require('./form')
 var equalheight = require('./equalHeight')
+var drawMap = require('./map-draw.js');
+var renderInvestmentChart = require('./investment-chart')
 var logger = require('./logger')('DIT Functions')
 var debug = logger.debug
 var error = logger.error
@@ -61,6 +63,8 @@ function onLoaded() {
     playVid()
     jsEnhanceExternalLinks()
     addAltTrackingPixel()
+    drawMap()
+    renderInvestmentChart()
   } catch (e) {
     error('On loaded failed!', e)
   }
@@ -113,9 +117,9 @@ function addActive() {
   } else if (url.match(/\/setup-guide\//)) {
     child = 'setup-guide/'
     debug('Adding active style to setup guide')
-  } else if (url.match('\/location-guide\/')) {
-    child = 'location-guide/'
-    debug('Adding active style to location guide')
+  } else if (url.match('\/investment-opportunities\/')) {
+    child = 'investment-opportunities/'
+    debug('Adding active style to investment opportunities')
   } else if (url.match(/\/\w{2,3}\/$/)) {
     debug('Not setting active style on current page')
     child = ''
