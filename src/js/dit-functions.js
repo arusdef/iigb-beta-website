@@ -2,7 +2,7 @@ var geoLocation = require('./geo-location')
 var form = require('./form')
 var equalheight = require('./equalHeight')
 var ioppsToggles = require('./iopps.js');
-var renderInvestmentChart = require('./investment-chart')
+// var renderInvestmentChart = require('./investment-chart')
 var logger = require('./logger')('DIT Functions')
 var debug = logger.debug
 var error = logger.error
@@ -62,7 +62,7 @@ function onLoaded() {
     jsEnhanceExternalLinks()
     addAltTrackingPixel()
     ioppsToggles()
-    renderInvestmentChart()
+    // renderInvestmentChart()
     showLabelsToggle()
     enablePinchZoom()
   } catch (e) {
