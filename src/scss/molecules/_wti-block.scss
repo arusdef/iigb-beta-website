@@ -1,15 +1,134 @@
-.wti-block {
-  border-bottom: 1px solid #EEE;
-  padding-bottom: 20px;
+.jumbotron--wti {
+  color: #FFF;
+  text-shadow: 0px 0px 20px black;
+  position: relative;
+  overflow: hidden;
+  background: #1E1348 top right;
+  height: auto;
+  max-height: none;
+  min-height: inherit;
+  background-repeat: no;
+  background-size: 100%;
 
-  .wti-summary {
-    p {
-      font-size: 18px;
+  @media (max-width: $screen-sm-max) {
+    background-position: right -200px top 0;
+    background-size: auto;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    background-position: right -400px top 0;
+    background-size: auto;
+  }
+}
+
+.wti {
+  &--block {
+    &__page-header {
+      border-color: rgba(13, 125, 164, 0.5);
+      border-width: 0px 0px 0px 25px;
+      border-style: solid;
+
+      &--text {
+        padding-top: 50px;
+        padding-bottom: 30px;
+
+        h1 {
+          font-size: 82px;
+          font-weight: 500;
+        }
+
+        h2 {
+          margin-top:0px;
+          font-size: 36px;
+          font-weight: 500;
+        }
+      }
+
+      &__region {
+        &--text {
+          padding-top: 100px;
+          padding-bottom: 30px;
+
+          h1 {
+          font-size: 82px;
+          font-weight: 500;
+          }
+
+          h2 {
+            margin-top:0px;
+            font-size: 36px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    &__teal {
+      border-left: 25px solid #0d7da4;
+    }
+
+    &__yellow {
+      border-left: 25px solid #ffc037;
+    }
+
+    &__purple {
+      border-left: 25px solid #4e167b;
+    }
+
+    &__turquoise {
+      border-left: 25px solid #8ae2fb
+    }
+
+    &__red {
+      border-left: 25px solid #b01723;
+    }
+
+    &__blue {
+      border-left: 25px solid #007ea3;
+    }
+
+    &__black {
+      border-left: 25px solid #000000;
+    }
+
+    &__quote {
+      background: #50167c top right;
+      color: #FFFFFF;
+      padding-top: 15px;
+
+      &--quote {
+        font-size: 16px;
+        border:none;
+
+      }
+
+      &--source {
+        font-size:13px;
+        color: #FFFFFF;
+      }
     }
   }
 
-  .wti-map {
+  &--industry-link {
+    margin-top: 30px;
+
+    a {
+      color: #ffc838;
+    }
+  }
+
+  &--instruction {
+    color: #5a5a5a;
+  }
+
+  &--map {
     position: relative;
+
+    &--responsive {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
     &__mapping-point {
       position: absolute;
@@ -20,7 +139,7 @@
     }
   }
 
-  #labels-toggle {
+  &--labels-toggle {
     display: none;
     cursor: pointer;
     text-decoration: underline;
@@ -31,12 +150,8 @@
       color: $link-colour-hover;
     }
   }
-  
-  .sector-toggle, .filter-toggle {
-    color: skyblue; 
-  }
 
-  table {
+  &--table {
     width: 100%;
     
     td, th {
@@ -54,7 +169,6 @@
       border-bottom: 2px solid;
 
       th {
-        text-align: center;
         font-weight: 600;
       }
     }
@@ -63,32 +177,47 @@
       border-bottom: 1px solid #BFC1C3;
     }
 
-    .map-indicator {
+    &__map-indicator {
       font-weight: bold;
     }
 
-    .value {
-        background-color: #e0de92;
+    &__value {
+      background-color: #e0de92;
+      font-weight: 600;
+      padding-left: 0.3em;
+      height:25px;
+
+      &.zero {
+        background-color: #FFFFFF;
+      }
+    }
+
+    &#airport-table {
+      td, th {
+        width: 13.5%;
+      }
+    }
+
+    &#salary-difference-table {
+      .right.positive {
+        background-color: #B8E673;
         font-weight: 600;
         padding-left: 0.3em;
+        height: 25px;
+      }
 
-        &.zero {
-          background-color: #FFFFFF;
-        }
+      .left.negative { 
+        background-color: #E98174;
+        font-weight: 600;
+        padding-left: 0.3em;
+        height: 25px;
+        float: right;
+      }
     }
   }
 
-  #salary-difference-table {
-    .positive {
-      background-color: #B8E673;
-        font-weight: 600;
-        padding-left: 0.3em;
-    }
-
-    .negative { 
-      background-color: #E98174;
-        font-weight: 600;
-        padding-left: 0.3em;
-    }
+  &--summary {
+    color: #00549f;
+    cursor: pointer;
   }
 }
